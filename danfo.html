@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+     <script src="https://cdn.jsdelivr.net/npm/danfojs@1.1.0/lib/bundle.min.js"></script>
+     <title>Document</title>
+</head>
+
+<body>
+  <div id="plot_div"></div>
+
+  <div id="plot_div"></div>
+    <script>
+
+        const remote_url = 'https://huntedu.github.io/web/Oil_Reserves.xlsx';
+        dfd.readExcel(remote_url).then(df => {
+          df.print()
+        })
+        dfd.readExcel(remote_url).then(df => {
+        df.plot('plot_div').pie({ config: { values: "양", labels: "나라" } })
+        })
+
+    </script>
+</body>
+
+</html>
